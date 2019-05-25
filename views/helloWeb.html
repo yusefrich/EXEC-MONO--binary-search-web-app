@@ -10,37 +10,67 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     {{.Style}}
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Monoton|Roboto:300,400,500,700&display=swap" rel="stylesheet">
+
     <title>Hello, world!</title>
 </head>
 
 <body>
-    <div class="container bg-flat-container flat-container">
-        <form id="data">
-            <div class="form-group animated jackInTheBox ">
-                <label for="exampleFormControlInput1">Tamanho da lista</label>
-                <input name="tamanho" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ex. 6">
-            </div>
-            <div class="form-group animated jackInTheBox">
-                <label for="exampleFormControlInput1">Lista (separe os numeros com espaços)</label>
-                <input name="dados" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ex. 1 2 3 4 5 6">
-            </div>
-            <div class="form-group animated jackInTheBox">
-                <label for="exampleFormControlInput1">Valor que está contido na array</label>
-                <input name="chave" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Ex. 2">
-            </div>
-            <button type="submit" value="submit" class="btn btn-primary mb-2 animated jackInTheBox">Buscar Lista</button>
-        </form>
-        <div class="h1">
-            Lista consultada...
-        </div>
-        <div class="jumbotron jumbotron-fluid">
-                <div class="container">
-                  <h1 class="display-4">Resposta: {{.ChaveBuscada}}</h1>
-                  <p class="lead">Lista: {{.ListaCompleta}}</p>
+    <div class="container bg-flat-container-dark flat-container-header animated fadeInDown">
+        <a class="btn btn-primary" target="blank" href="https://github.com/yusefrich/WP--binary-search-web-app" role="button"><i class="fab fa-3x fa-github"></i> <br>Source Code</a>
+    </div>
+
+    <div class="container bg-flat-container flat-container-top ">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="lista-consultada-title p-0 animated fadeInDown">
+
+                    <h1>Insira os dados para realizar a busca...</h1>
                 </div>
-              </div>
-    </div>    
+
+                <form id="data">
+                    <div class="form-group animated fadeInDown ">
+                        <label for="exampleFormControlInput1 text-white">Tamanho da lista</label>
+                        <input name="tamanho" type="text" class="form-control" id="exampleFormControlInput1"
+                            placeholder="Ex. 6">
+                    </div>
+                    <div class="form-group animated fadeInDown">
+                        <label for="exampleFormControlInput1 text-white">Lista (separe os numeros com espaços)</label>
+                        <input name="dados" type="text" class="form-control" id="exampleFormControlInput1"
+                            placeholder="Ex. 1 2 3 4 5 6">
+                    </div>
+                    <div class="form-group animated fadeInDown">
+                        <label for="exampleFormControlInput1 text-white">Valor que está contido na array</label>
+                        <input name="chave" type="text" class="form-control" id="exampleFormControlInput1"
+                            placeholder="Ex. 2">
+                    </div>
+                    <button type="submit" value="submit" class="btn btn-primary mb-2 animated fadeInDown">Buscar
+                        Lista</button>
+                </form>
+
+            </div>
+            <div class="col-md-6 result animated fadeInDown">
+                <div class="lista-consultada-title p-0">
+
+                    <h1>Lista consultada...</h1>
+                </div>
+                <div class="container p-0 mt-5">
+                    <h1 class="display-4 text-white ">Está contido? {{.ChaveBuscada}}</h1>
+                    <p class="lead text-white ">Lista: {{.ListaCompleta}}</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="container flat-container lista-consultada animated fadeInDown">
+    </div>
+    <div class="container bg-flat-container-light flat-container-bot animated fadeInDown">
+
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
