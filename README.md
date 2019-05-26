@@ -4,6 +4,8 @@
 Web application created using beego framework, can be used to search for a key in a given 
 int array and shows if that key is found or not.
 
+[live link](http://bin-go.herokuapp.com)
+
 ### App Prerequisites
 
 * [golang](https://golang.org/dl/)
